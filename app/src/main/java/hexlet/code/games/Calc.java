@@ -5,7 +5,7 @@ import java.util.Random;
 public class Calc {
     private static int[] nums;
     private static int[] generateNumbers() {
-        int[] nums = new int[3];
+        nums = new int[3];
         Random random = new Random();
 
         for (int i = 0; i < nums.length - 1; i++) {

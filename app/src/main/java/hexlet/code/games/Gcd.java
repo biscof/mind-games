@@ -5,7 +5,7 @@ import java.util.Random;
 public class Gcd {
     private static int[] nums;
     private static int[] generateNumbers() {
-        int[] nums = new int[2];
+        nums = new int[2];
         Random random = new Random();
 
         for (int i = 0; i < nums.length; i++) {
@@ -18,8 +18,8 @@ public class Gcd {
     public static String generateAnswer() {
         int num1 = Math.abs(nums[0]);
         int num2 = Math.abs(nums[1]);
-        int biggerNum = num1 > num2 ? num1 : num2;
-        int smallerNum = num1 == biggerNum ? num2 : num1;
+        int biggerNum = Math.max(num1, num2);
+        int smallerNum = Math.min(num1, num2);
         int gcd = 1;
 
         if (smallerNum == 0) {
