@@ -1,26 +1,30 @@
-package hexlet.code;
+package hexlet.code.games;
+
+import hexlet.code.Cli;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class Even {
+    private static int number;
     public static void playGame() {
-        Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         String userAnswer;
-        int intRandom;
         int round = 0;
+        String expression;
+        String answer;
 
-        String userName = Cli.greetUser();
+        Cli.greetUser();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         while (round < 3) {
-            intRandom = random.nextInt(1000);
-            System.out.printf("Question: %d\n", intRandom);
+            expression = generateExpression();
+            answer = generateAnswer();
+            System.out.printf("Question: %s\n", expression);
             System.out.print("Your answer: ");
             userAnswer = scanner.next();
 
-            if (isEven(intRandom).equals(userAnswer))
+            if (answer.equals(userAnswer))
             {
                 System.out.println("Correct!");
                 round++;
@@ -28,17 +32,25 @@ public class Even {
                 System.out.printf("\"%s\" is wrong answer ;(. "
                                 + "Correct answer was \"%s\".\n"
                                 + "Let's try again, %s!\n",
-                                userAnswer, isEven(intRandom), userName);
-                round = 0;
+                                userAnswer, answer, Cli.userName);
+                break;
             }
 
             if (round == 3) {
-                System.out.printf("Congratulations, %s!\n", userName);
+                System.out.printf("Congratulations, %s!\n", Cli.userName);
             }
         }
     }
 
-    private static String isEven(int number) {
+    private static String generateAnswer() {
         return number % 2 == 0 ? "yes" : "no";
     }
+
+    private static String generateExpression() {
+        Random random = new Random();
+        number = random.nextInt(1000);
+        return Integer.toString(number);
+    }
+
+
 }
