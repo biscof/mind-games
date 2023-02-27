@@ -6,3 +6,5 @@
 [![asciicast](https://asciinema.org/a/q8bU5XctMAKhKbD5HoSW0qi1N.svg)](https://asciinema.org/a/q8bU5XctMAKhKbD5HoSW0qi1N)
 ### "Calc" game performance recording
 [![asciicast](https://asciinema.org/a/G8JNasiIJteNeTRM6KPJdIf7S.svg)](https://asciinema.org/a/G8JNasiIJteNeTRM6KPJdIf7S)
+### "GCD" game performance recording
+[![asciicast](https://asciinema.org/a/jAbtGPK3XRhBW4dCDe2b8L5S8.svg)](https://asciinema.org/a/jAbtGPK3XRhBW4dCDe2b8L5S8)
