@@ -6,6 +6,31 @@ import hexlet.code.games.Even;
 import java.util.Scanner;
 
 public class Engine {
+    public static void chooseGame(){
+        Scanner scanner = new Scanner(System.in);
+        String gameNumber;
+
+        System.out.print("Please enter the game number and press Enter.\n"
+                + "1 - Greet\n"
+                + "2 - Even\n"
+                + "3 - Calculator\n"
+                + "0 - Exit\n"
+                + "Your choice: ");
+        gameNumber = scanner.next();
+
+        if (gameNumber.equals("0")) {
+            System.out.println("Bye!");
+        } else if (gameNumber.equals("1")) {
+            Cli.greetUser();
+        } else if (gameNumber.equals("2")) {
+            startGame(gameNumber);
+        } else if (gameNumber.equals("3")) {
+            startGame(gameNumber);
+        } else {
+            System.out.println("Invalid number provided.");
+        }
+    }
+
     public static void startGame(String gameNum) {
         Scanner scanner = new Scanner(System.in);
         String userAnswer;
