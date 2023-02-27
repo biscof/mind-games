@@ -8,3 +8,5 @@
 [![asciicast](https://asciinema.org/a/G8JNasiIJteNeTRM6KPJdIf7S.svg)](https://asciinema.org/a/G8JNasiIJteNeTRM6KPJdIf7S)
 ### "GCD" game performance recording
 [![asciicast](https://asciinema.org/a/jAbtGPK3XRhBW4dCDe2b8L5S8.svg)](https://asciinema.org/a/jAbtGPK3XRhBW4dCDe2b8L5S8)
+### "Progression" game performance recording
+[![asciicast](https://asciinema.org/a/ZHVXfxhZNkTBSo3MJz8k90K6g.svg)](https://asciinema.org/a/ZHVXfxhZNkTBSo3MJz8k90K6g)
