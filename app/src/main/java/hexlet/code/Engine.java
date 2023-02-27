@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
 
 import java.util.Scanner;
 
@@ -14,6 +15,7 @@ public class Engine {
                 + "1 - Greet\n"
                 + "2 - Even\n"
                 + "3 - Calculator\n"
+                + "4 - GCD\n"
                 + "0 - Exit\n"
                 + "Your choice: ");
         gameNumber = scanner.next();
@@ -25,6 +27,8 @@ public class Engine {
         } else if (gameNumber.equals("2")) {
             startGame(gameNumber);
         } else if (gameNumber.equals("3")) {
+            startGame(gameNumber);
+        } else if (gameNumber.equals("4")) {
             startGame(gameNumber);
         } else {
             System.out.println("Invalid number provided.");
@@ -43,6 +47,7 @@ public class Engine {
         switch (gameNum) {
             case "2" -> System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
             case "3" -> System.out.println("What is the result of the expression?");
+            case "4" -> System.out.println("Find the greatest common divisor of given numbers.");
         }
 
         while (round < 3) {
@@ -52,6 +57,9 @@ public class Engine {
             } else if (gameNum.equals("3")) {
                 expression = Calc.generateExpression();
                 answer = Calc.generateAnswer();
+            } else if (gameNum.equals("4")) {
+                expression = Gcd.generateExpression();
+                answer = Gcd.generateAnswer();
             }
             System.out.printf("Question: %s\n", expression);
             System.out.print("Your answer: ");
