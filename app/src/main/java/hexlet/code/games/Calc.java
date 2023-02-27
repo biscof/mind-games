@@ -4,7 +4,8 @@ import java.util.Random;
 
 public class Calc {
     private static int[] nums;
-    private static int[] generateNumbers() {
+
+    private static void generateNumbers() {
         nums = new int[3];
         Random random = new Random();
 
@@ -12,8 +13,6 @@ public class Calc {
             nums[i] = random.nextInt(11);
         }
         nums[nums.length - 1] = random.nextInt(3);
-
-        return nums;
     }
 
     public static String generateAnswer() {
@@ -28,7 +27,7 @@ public class Calc {
         return "";
     }
     public static String generateExpression() {
-        nums = generateNumbers();
+        generateNumbers();
 
         if (nums[2] == 0) {
             return String.format("%d + %d", nums[0], nums[1]);

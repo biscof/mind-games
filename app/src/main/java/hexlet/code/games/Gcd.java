@@ -4,15 +4,14 @@ import java.util.Random;
 
 public class Gcd {
     private static int[] nums;
-    private static int[] generateNumbers() {
+
+    private static void generateNumbers() {
         nums = new int[2];
         Random random = new Random();
 
         for (int i = 0; i < nums.length; i++) {
             nums[i] = random.nextInt(40);
         }
-
-        return nums;
     }
 
     public static String generateAnswer() {
@@ -38,7 +37,7 @@ public class Gcd {
     }
 
     public static String generateExpression() {
-        nums = generateNumbers();
+        generateNumbers();
         return String.format("%d %d", nums[0], nums[1]);
     }
 }

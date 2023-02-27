@@ -5,6 +5,7 @@ import java.util.Random;
 public class Progression {
     private static String[] progression;
     private static int hiddenNum;
+
     private static void generateProgression() {
         int[] nums = new int[10];
         progression = new String[nums.length];
