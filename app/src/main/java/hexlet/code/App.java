@@ -23,10 +23,10 @@ public class App {
                 Cli.greetUser();
                 break;
             } else if (gameNumber.equals("2")) {
-                Even.playGame();
+                Engine.startGame(gameNumber);
                 break;
             } else if (gameNumber.equals("3")) {
-                Calc.playGame();
+                Engine.startGame(gameNumber);
                 break;
             } else {
                 System.out.print("Please enter a valid number: ");
