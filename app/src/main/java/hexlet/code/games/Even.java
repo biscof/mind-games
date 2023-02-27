@@ -14,6 +14,4 @@ public class Even {
         number = random.nextInt(1000);
         return Integer.toString(number);
     }
-
-
 }
