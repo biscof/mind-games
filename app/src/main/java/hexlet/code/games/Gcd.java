@@ -6,12 +6,12 @@ public class Gcd {
     private static int[] nums;
 
     private static void generateNumbers() {
-        final int NUM_BOUND = 50;
+        final int numBound = 50;
         nums = new int[2];
         Random random = new Random();
 
         for (int i = 0; i < nums.length; i++) {
-            nums[i] = random.nextInt(NUM_BOUND);
+            nums[i] = random.nextInt(numBound);
         }
     }
 

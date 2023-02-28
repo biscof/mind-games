@@ -17,9 +17,9 @@ public class Prime {
     }
 
     public static String generateExpression() {
-        final int NUM_BOUND = 30;
+        final int numBound = 30;
         Random random = new Random();
-        number = random.nextInt(2, NUM_BOUND);
+        number = random.nextInt(2, numBound);
         return Integer.toString(number);
     }
 }

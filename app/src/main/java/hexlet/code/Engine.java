@@ -23,8 +23,7 @@ public class Engine {
     }
 
     public static void startGame(String gameNum) {
-        final int NUM_OF_ROUNDS = 3;
-
+        final int numOfRounds = 3;
         Scanner scanner = new Scanner(System.in);
         String userAnswer;
         int round = 0;
@@ -42,7 +41,7 @@ public class Engine {
             default -> System.out.println("Invalid number.");
         }
 
-        while (round < NUM_OF_ROUNDS) {
+        while (round < numOfRounds) {
             switch (gameNum) {
                 case "2" -> {
                     expression = Even.generateExpression();
@@ -64,9 +63,7 @@ public class Engine {
                     expression = Prime.generateExpression();
                     answer = Prime.generateAnswer();
                 }
-                default -> {
-                    System.out.println("Invalid number.");
-                }
+                default -> System.out.println("Invalid number.");
             }
             System.out.printf("Question: %s\n", expression);
             System.out.print("Your answer: ");
@@ -84,7 +81,7 @@ public class Engine {
                 break;
             }
 
-            if (round == NUM_OF_ROUNDS) {
+            if (round == numOfRounds) {
                 System.out.printf("Congratulations, %s!\n", Cli.getUserName());
             }
         }

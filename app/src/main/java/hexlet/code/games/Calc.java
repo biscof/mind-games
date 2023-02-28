@@ -6,8 +6,8 @@ public class Calc {
     private static int[] nums;
 
     private static void generateNumbers() {
-        final int NUM_BOUND = 20;
-        final int OPERATOR_INDEX = 3;
+        final int numBound = 20;
+        final int operatorIndex = 3;
         int itemsToFormExpression = 2;
         int itemToIdentifyOperator = 1;
         nums = new int[itemsToFormExpression + itemToIdentifyOperator];
@@ -15,9 +15,9 @@ public class Calc {
 
 
         for (int i = 0; i < nums.length - 1; i++) {
-            nums[i] = random.nextInt(NUM_BOUND);
+            nums[i] = random.nextInt(numBound);
         }
-        nums[nums.length - 1] = random.nextInt(OPERATOR_INDEX);
+        nums[nums.length - 1] = random.nextInt(operatorIndex);
     }
 
     public static String generateAnswer() {
