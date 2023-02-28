@@ -76,7 +76,7 @@ public class Engine {
                     Correct answer was "%s".
                     Let's try again, %s!
                     """.formatted(userAnswer, answer, Cli.userName));
-                round = 0;
+                break;
             }
 
             if (round == 3) {
