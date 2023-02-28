@@ -14,6 +14,7 @@ public class App {
             3 - Calculator
             4 - GCD
             5 - Progression
+            6 - Prime
             0 - Exit
             Your choice:\s""");
         gameNumber = scanner.next();
