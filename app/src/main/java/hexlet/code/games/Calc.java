@@ -3,45 +3,49 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Calc {
-    private static int[] nums;
+    private static int num1;
+    private static int num2;
+    private static int operatorCode;
 
-    private static void generateNumbers() {
+    public static String generateExpression() {
         final int numBound = 20;
-        final int operatorIndex = 3;
-        int itemsToFormExpression = 2;
-        int itemToIdentifyOperator = 1;
-        nums = new int[itemsToFormExpression + itemToIdentifyOperator];
+        final int operatorCodeBound = 3;
+
         Random random = new Random();
+        num1 = random.nextInt(numBound);
+        num2 = random.nextInt(numBound);
+        operatorCode = random.nextInt(operatorCodeBound);
 
-
-        for (int i = 0; i < nums.length - 1; i++) {
-            nums[i] = random.nextInt(numBound);
+        switch (operatorCode) {
+            case 0 -> {
+                return String.format("%d + %d", num1, num2);
+            }
+            case 1 -> {
+                return String.format("%d - %d", num1, num2);
+            }
+            case 2 -> {
+                return String.format("%d * %d", num1, num2);
+            }
+            default -> {
+                return "Invalid value.";
+            }
         }
-        nums[nums.length - 1] = random.nextInt(operatorIndex);
     }
 
     public static String generateAnswer() {
-        if (nums[2] == 0) {
-            return Integer.toString(nums[0] + nums[1]);
-        } else if (nums[2] == 1) {
-            return Integer.toString(nums[0] - nums[1]);
-        } else if (nums[2] == 2) {
-            return Integer.toString(nums[0] * nums[1]);
+        switch (operatorCode) {
+            case 0 -> {
+                return Integer.toString(num1 + num2);
+            }
+            case 1 -> {
+                return Integer.toString(num1 - num2);
+            }
+            case 2 -> {
+                return Integer.toString(num1 * num2);
+            }
+            default -> {
+                return "Invalid value.";
+            }
         }
-
-        return "";
-    }
-    public static String generateExpression() {
-        generateNumbers();
-
-        if (nums[2] == 0) {
-            return String.format("%d + %d", nums[0], nums[1]);
-        } else if (nums[2] == 1) {
-            return String.format("%d - %d", nums[0], nums[1]);
-        } else if (nums[2] == 2) {
-            return String.format("%d * %d", nums[0], nums[1]);
-        }
-
-        return "";
     }
 }

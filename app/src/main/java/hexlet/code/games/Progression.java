@@ -3,19 +3,18 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Progression {
-    private static String[] progression;
     private static int hiddenNum;
 
-    private static void generateProgression() {
+    public static String generateExpression() {
         final int progressionLength = 10;
         final int initNumBound = 15;
         final int incrementBound = 12;
 
         int[] nums = new int[progressionLength];
-        progression = new String[nums.length];
+        String[] progression = new String[progressionLength];
         Random random = new Random();
         int nextNum = random.nextInt(initNumBound);
-        int increment = random.nextInt(incrementBound);
+        int increment = random.nextInt(1, incrementBound);
         int indexToHide = random.nextInt(nums.length);
 
         for (int i = 0; i < nums.length; i++) {
@@ -29,15 +28,11 @@ public class Progression {
 
             nextNum += increment;
         }
+
+        return String.join(" ", progression);
     }
 
     public static String generateAnswer() {
         return Integer.toString(hiddenNum);
     }
-
-    public static String generateExpression() {
-        generateProgression();
-        return String.join(" ", progression);
-    }
-
 }
