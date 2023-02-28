@@ -28,6 +28,7 @@ public class Engine {
         int round = 0;
         String expression = "";
         String answer = "";
+        int numOfRounds = 3;
 
         Cli.greetUser();
 
@@ -37,10 +38,10 @@ public class Engine {
             case "4" -> System.out.println("Find the greatest common divisor of given numbers.");
             case "5" -> System.out.println("What number is missing in the progression?");
             case "6" -> System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-            default -> System.out.println(" ");
+            default -> System.out.println("Invalid number.");
         }
 
-        while (round < 3) {
+        while (round < numOfRounds) {
             switch (gameNum) {
                 case "2" -> {
                     expression = Even.generateExpression();
@@ -62,6 +63,9 @@ public class Engine {
                     expression = Prime.generateExpression();
                     answer = Prime.generateAnswer();
                 }
+                default -> {
+                    System.out.println("Invalid number.");;
+                }
             }
             System.out.printf("Question: %s\n", expression);
             System.out.print("Your answer: ");
@@ -75,12 +79,12 @@ public class Engine {
                     "%s" is wrong answer ;(. \
                     Correct answer was "%s".
                     Let's try again, %s!
-                    """.formatted(userAnswer, answer, Cli.userName));
+                    """.formatted(userAnswer, answer, Cli.getUserName()));
                 break;
             }
 
-            if (round == 3) {
-                System.out.printf("Congratulations, %s!\n", Cli.userName);
+            if (round == numOfRounds) {
+                System.out.printf("Congratulations, %s!\n", Cli.getUserName());
             }
         }
     }

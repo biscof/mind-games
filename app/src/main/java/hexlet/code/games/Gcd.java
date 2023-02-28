@@ -8,9 +8,10 @@ public class Gcd {
     private static void generateNumbers() {
         nums = new int[2];
         Random random = new Random();
+        int numbersBound = 50;
 
         for (int i = 0; i < nums.length; i++) {
-            nums[i] = random.nextInt(40);
+            nums[i] = random.nextInt(numbersBound);
         }
     }
 

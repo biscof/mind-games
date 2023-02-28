@@ -11,7 +11,8 @@ public class Even {
 
     public static String generateExpression() {
         Random random = new Random();
-        number = random.nextInt(1000);
+        int numbersBound = 1000;
+        number = random.nextInt(numbersBound);
         return Integer.toString(number);
     }
 }
