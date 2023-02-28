@@ -7,14 +7,15 @@ public class Progression {
     private static int hiddenNum;
 
     private static void generateProgression() {
-        int numberOfItemsInProgression = 10;
-        int[] nums = new int[numberOfItemsInProgression];
+        final int PROGRESSION_LENGTH = 10;
+        final int INIT_NUM_BOUND = 15;
+        final int INCREMENT_BOUND = 12;
+
+        int[] nums = new int[PROGRESSION_LENGTH];
         progression = new String[nums.length];
         Random random = new Random();
-        int initNumberBound = 15;
-        int incrementBound = 12;
-        int nextNum = random.nextInt(initNumberBound);
-        int increment = random.nextInt(incrementBound);
+        int nextNum = random.nextInt(INIT_NUM_BOUND);
+        int increment = random.nextInt(INCREMENT_BOUND);
         int indexToHide = random.nextInt(nums.length);
 
         for (int i = 0; i < nums.length; i++) {

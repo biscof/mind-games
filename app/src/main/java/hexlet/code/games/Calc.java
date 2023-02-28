@@ -6,17 +6,18 @@ public class Calc {
     private static int[] nums;
 
     private static void generateNumbers() {
+        final int NUM_BOUND = 20;
+        final int OPERATOR_INDEX = 3;
         int itemsToFormExpression = 2;
         int itemToIdentifyOperator = 1;
         nums = new int[itemsToFormExpression + itemToIdentifyOperator];
         Random random = new Random();
-        int numbersBound = 20;
-        int operatorIndex = 3;
+
 
         for (int i = 0; i < nums.length - 1; i++) {
-            nums[i] = random.nextInt(numbersBound);
+            nums[i] = random.nextInt(NUM_BOUND);
         }
-        nums[nums.length - 1] = random.nextInt(operatorIndex);
+        nums[nums.length - 1] = random.nextInt(OPERATOR_INDEX);
     }
 
     public static String generateAnswer() {

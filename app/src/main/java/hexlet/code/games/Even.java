@@ -10,9 +10,9 @@ public class Even {
     }
 
     public static String generateExpression() {
+        final int NUM_BOUND = 1000;
         Random random = new Random();
-        int numbersBound = 1000;
-        number = random.nextInt(numbersBound);
+        number = random.nextInt(NUM_BOUND);
         return Integer.toString(number);
     }
 }
