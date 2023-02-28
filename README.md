@@ -10,3 +10,5 @@
 [![asciicast](https://asciinema.org/a/jAbtGPK3XRhBW4dCDe2b8L5S8.svg)](https://asciinema.org/a/jAbtGPK3XRhBW4dCDe2b8L5S8)
 ### "Progression" game performance recording
 [![asciicast](https://asciinema.org/a/ZHVXfxhZNkTBSo3MJz8k90K6g.svg)](https://asciinema.org/a/ZHVXfxhZNkTBSo3MJz8k90K6g)
+### "Prime" game performance recording
+[![asciicast](https://asciinema.org/a/Fz7Nb9apBKEnvWsnZJ46IwfpB.svg)](https://asciinema.org/a/Fz7Nb9apBKEnvWsnZJ46IwfpB)
