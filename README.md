@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The Mind Games project is a collection of five console games. Players must answer questions and complete challenges in each game. The goal is to answer three questions correctly to win the game, while incorrect answers result in a restart.
+The Mind Games project is a collection of five console-based games. The goal is to answer three questions correctly to win the game. If the answer is wrong the game starts over.
 
 
 ## Features
@@ -32,7 +32,7 @@ git clone https://github.com/biscof/mind-games.git
 cd mind-games/app
 ```
 
-3. To build and run the app in your console, execute this command:
+3. To build and run the app in your console, use this command:
 
 ```bash
 make start-game
